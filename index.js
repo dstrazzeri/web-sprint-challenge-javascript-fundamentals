@@ -30,12 +30,10 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(num) {
-  let count = 0;
-  for(let i = 0; i < num; i++){
-    count = count + num();
-  }
-  return num;
+function summation() {
+let sum = 0;
+for (let i = 0; i <= 9; i++, sum += i);
+return sum;
 }
 
 
@@ -61,11 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(i){
-  zooAnimals.forEach(function(item){
-    displayNames = (`name: ${[i].animal_name}, scientific: ${[i].scientific_name}`);
-  });
+  
+  function animalNames(zooAnimals){
+  const displayNames = zooAnimals.forEach(function(item){
+     return `name: ${item.animal_name}, scientific: ${item.scientific_name}`
+    });
+    return displayNames;
   }
+  
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -87,7 +88,7 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(){
-    zooAnimals.filter(function(){
+    animalNames.filter(function(){
      return animalNames.population < 5;
    });
   }
@@ -98,11 +99,11 @@ const zooAnimals = [
   Using USApop find the total population from the zoos array using the .reduce() method. 
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
- const sum = [5, 1, 8, 1, 2, 9, 5, 10, 10, 5].reduce(USApop,0);
-  function USApop(accumulator, a){
-   return accumulator + a;
+ 
+  
+  function USApop(){
+
   }
-  console.log(sum);
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -189,8 +190,8 @@ const cuboid = new CuboidMaker(4, 5, 5);
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log('topic3', cuboid.volume()); // 100
-// console.log('topic3', cuboid.surfaceArea()); // 130
+console.log('topic3', cuboid.volume()); // 100
+console.log('topic3', cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -211,8 +212,8 @@ return this.surfaceArea = 2 * (this.length * this.width + this.length * this.hei
 const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log('topic4', cuboidTwo.volume()); // 100
-// console.log('topic4', cuboidTwo.surfaceArea()); // 130
+console.log('topic4', cuboidTwo.volume()); // 100
+console.log('topic4', cuboidTwo.surfaceArea()); // 130
 
 
 
