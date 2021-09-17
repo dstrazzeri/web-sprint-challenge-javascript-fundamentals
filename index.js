@@ -30,12 +30,10 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
-let sum = 0;
-for (let i = 0; i <= 9; i++, sum += i);
-return sum;
+function summation(n) {
+  return n * (n + 1) / 2;
 }
-
+// console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -60,11 +58,11 @@ const zooAnimals = [
   */
 
   
-  function animalNames(zooAnimals){
-  const displayNames = zooAnimals.forEach(function(item){
-     return `name: ${item.animal_name}, scientific: ${item.scientific_name}`
-    });
-    return displayNames;
+  function animalNames(){
+const displayNames = ['name: ${animal_name}, scientific: ${scientific_name}'];
+displayNames.forEach(displayNames => {
+  return displayNames;
+});
   }
   
 
@@ -88,11 +86,9 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(){
-    animalNames.filter(function(){
-     return animalNames.population < 5;
-   });
-  }
   
+  }
+ 
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -102,7 +98,11 @@ const zooAnimals = [
  
   
   function USApop(){
-
+const arrayOfNumbers = [5, 1, 8, 1, 2, 9, 5, 10, 10, 5];
+const sum = arrayOfNumbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
+return sum;
   }
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -190,8 +190,8 @@ const cuboid = new CuboidMaker(4, 5, 5);
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-console.log('topic3', cuboid.volume()); // 100
-console.log('topic3', cuboid.surfaceArea()); // 130
+// console.log('topic3', cuboid.volume()); // 100
+// console.log('topic3', cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -212,8 +212,8 @@ return this.surfaceArea = 2 * (this.length * this.width + this.length * this.hei
 const cuboidTwo = new CuboidMakerTwo(4, 5, 5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log('topic4', cuboidTwo.volume()); // 100
-console.log('topic4', cuboidTwo.surfaceArea()); // 130
+// console.log('topic4', cuboidTwo.volume()); // 100
+// console.log('topic4', cuboidTwo.surfaceArea()); // 130
 
 
 
