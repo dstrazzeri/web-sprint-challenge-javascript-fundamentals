@@ -58,12 +58,15 @@ const zooAnimals = [
   */
 
   
-  function animalNames(){
-const displayNames = ['name: ${animal_name}, scientific: ${scientific_name}'];
-displayNames.forEach(displayNames => {
-  return displayNames;
+function animalNames(){
+let displayNames = [];
+ zooAnimals.forEach(function(arr){
+displayNames.push(`name: ${arr.animal_name}, scientific: ${arr.scientific_name}`);
 });
-  }
+return displayNames();
+ }
+
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
