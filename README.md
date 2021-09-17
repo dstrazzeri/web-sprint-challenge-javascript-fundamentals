@@ -26,13 +26,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map basically takes 2 arguments, a callback and option context. The callback runs for each value in the array and returns each new value in the resulting array.
+.reduce also runs a callback for each element of an array, BUT reduce passes the result of this callback(the accumulator) from one array element to the other.
+.filter its what it sounds like! a way to filter stuff out. Say you have an array but only want some of the elements in it, if the callback function returns true, the current element will be in the resulting array.
+
 2. Explain the difference between a callback and a higher order function.
+
+A HOF takes another function as an argument and/or returns a function to its callers.
+A callback is a function that is passed to another function with the exception that the other function will call it.
 
 3. Explain what a closure is.
 
+A closure gives you access to an outer function's scope from an inner function.
+
 4. Describe the four principles of the 'this' keyword.
 
+Window/Global Object Binding - the value of 'this' will be the window/console object;
+Implicit Binding - Whenever a preceding dot calls a function, the object before the dot is this.
+New Binding - Whenever we use a constructor function, this refers to the specific instance of the object that is created and returned by the constructor function.
+Explicit Binding - Whenever we use JavaScript's call or apply method, this is explicitly defined.
+
 5. Why do we need super() in an extended class?
+The super keyword is used to access and call functions on an object's parents. I like to think it basically copys and pastes the parents functions so that your new object inherits them.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
